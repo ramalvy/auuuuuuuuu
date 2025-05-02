@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pagiii</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide1">
+      <h1>haii sayang</h1>
+      <p>aku punya sesuatu</p>
+      <button onclick="nextSlide()">klik dong</button>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2">
+      <h1>SELAMAT PAGI SAYANG</h1>
+      <p>semoga kamu dalam lindungan allah selalu ya, di kelilingi sama orang orang baik trus,</p>
+      <p>intiny mah apapun buat kamu aku doain yang baik baik, seandainy aku bisa ketemu kamu </p>
+      <P>stiap hari, mungkin aku tidak akan katakan di sini,klo akuu sayang banget sama kamu,<p>
+      <p>cinta kamu jugaa ehehe, satu lagi semoga luka ny cpet sembuh yaaa sayang</p>
+      <button onclick="showMessage()">Klik lagi coba</button>
+      <div class="hidden-msg">
+        <p> </p>
+        <p>🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷🩷</p>
+        <p>ahahahaha</p>
+        <button onclick="nextSlide()">lanjut</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide3">
+      <h1>sesuatu ny disini</h1>
+      <button onclick="showGift()">iniii</button>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" id="slide4">
+      <h1>I LOVE YOU MOREEE</h1>
+      <p></p> 
+      <img src="gif.gif" class="gift" alt="  " />
+      <canvas id="confetti" class="confetti"></canvas>
+    </div>
+
+
+
+    <!-- Musik -->
+    <audio autoplay loop>
+      <source src="a1.mp3" type=" audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.querySelector("audio");
+        const userInteraction = () => {
+          audio.play();
+          document.removeEventListener("click", userInteraction);
+        };
+        document.addEventListener("click", userInteraction);
+      });
+    </script>
+  </body>
+</html> 
